@@ -83,7 +83,7 @@ export default function Images({ data } : { data: Array<ImageData> }) {
                 <img src={detail.imageUrl} alt={detail.title} />
                 <h2 id="simple-modal-title">{detail.title}</h2>
                 <p id="simple-modal-description">
-                    {detail.description?.replace("<br><br>", " ")}
+                    {detail.description?.replace(/<br>|<i>|<\/i>/g, " ")}
                 </p>
             </div>
         </Modal>
